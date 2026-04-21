@@ -12,6 +12,9 @@ body{
     top: 20px;
     right: 20px;
 }
+.over_de_boerenmarkt{
+  padding: 20px;
+}
 footer{
     background-color: #EEEEEE;
     width: 100vw;
