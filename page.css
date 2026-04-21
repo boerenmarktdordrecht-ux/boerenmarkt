@@ -3,25 +3,6 @@ body{
     margin: 0;
     font-family: sans-serif, Arial, Helvetica;
 }
-section{
-    margin: 10px 50px;
-    border-radius: 20px 0px 20px 0px;
-    padding: 10px;
-    min-height:200px;
-    width:80%;
-    border: 1px solid #4C9E38;
-    display: inline-flex;
-    .tekst{
-        width: 50%;
-        transition: 2s;
-    }
-    .tekst:hover{
-        width: 100%;
-    }
-    .plaatje{
-            width: 50%; 
-    }
-}
 
 .fixed{
     z-index: 99;
@@ -30,27 +11,6 @@ section{
     position: fixed;
     top: 20px;
     right: 20px;
-}
-img{
-    height: 200px;
-    
-}
-
-.backgroundColor1{
-    background-color: #4C9E38;
-    transition: 1s;
-}
-.backgroundColor1:hover{
-    background-color: lightgray;
-}
-
-
-.backgroundColor2{
-    background-color: #39b2d1;
-    transition: 1s;
-}
-.backgroundColor2:hover{
-    background-color: lightgray;
 }
 footer{
     background-color: #EEEEEE;
@@ -63,8 +23,256 @@ footer a {
 }
 footer a:hover{
     color: #79ba45;
-
 }
-footer li{
-    
+
+/* Hero Slider */
+.hero {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    display: block;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+
+.slide h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
+    color: #ffcc00;
+}
+
+.slide p {
+    font-size: 1.2em;
+    margin: 0 0 30px 0;
+}
+
+.slide .buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.slide button {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.slide button.primary {
+    background-color: #4C9E38;
+    color: white;
+}
+
+.slide button.primary:hover {
+    background-color: #3a7a2a;
+    transform: scale(1.05);
+}
+
+.slide button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.slide button.secondary:hover {
+    background-color: white;
+    color: #4C9E38;
+}
+
+.hero-prev,
+.hero-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hero-prev {
+    left: 20px;
+}
+
+.hero-next {
+    right: 20px;
+}
+
+.slides_agenda {
+  position: relative;
+  margin: 20px;
+  padding: 40px 70px;
+  min-height: 360px;
+  background: linear-gradient(135deg, #dceccf, #f8f4eb);
+  border: 2px solid #1f3b1e;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.agenda-slider {
+  position: relative;
+  min-height: 280px;
+}
+
+.agenda-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.agenda-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.agenda-slide h2 {
+  margin: 0 0 24px;
+  text-align: center;
+  color: #153216;
+  font-size: 34px;
+}
+
+.agenda-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.agenda-card {
+  width: 220px;
+  min-height: 170px;
+  background: #2f8f46;
+  color: white;
+  border: 2px solid #14311a;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(20, 49, 26, 0.18);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.agenda-time {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  background: #e9f6dd;
+  color: #14311a;
+  border-radius: 999px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.agenda-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.agenda-prev,
+.agenda-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(47, 143, 70, 0.18);
+  color: #14311a;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1.3em;
+  cursor: pointer;
+  z-index: 3;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.agenda-prev { left: 18px; }
+.agenda-next { right: 18px; }
+
+@media (max-width: 768px) {
+  .content {
+    width: 80%;
+  }
+
+  .content h1 {
+    font-size: 40px;
+  }
+
+  .slides_agenda {
+    padding: 32px 55px;
+  }
+
+  .agenda-slide h2 {
+    font-size: 28px;
+  }
+
+  .agenda-card {
+    width: 100%;
+    min-height: auto;
+  }
 }
