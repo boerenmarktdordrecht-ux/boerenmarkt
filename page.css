@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+    font-family: sans-serif, Arial, Helvetica;
+}
+section{
+    margin: 10px 50px;
+    border-radius: 20px 0px 20px 0px;
+    padding: 10px;
+    min-height:200px;
+    width:80%;
+    border: 1px solid #4C9E38;
+    display: inline-flex;
+    .tekst{
+        width: 50%;
+        transition: 2s;
+    }
+    .tekst:hover{
+        width: 100%;
+    }
+    .plaatje{
+            width: 50%; 
+    }
+}
+
+.fixed{
+    z-index: 99;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+img{
+    height: 200px;
+    
+}
+
+.backgroundColor1{
+    background-color: #4C9E38;
+    transition: 1s;
+}
+.backgroundColor1:hover{
+    background-color: lightgray;
+}
+
+
+.backgroundColor2{
+    background-color: #39b2d1;
+    transition: 1s;
+}
+.backgroundColor2:hover{
+    background-color: lightgray;
+}
+footer{
+    background-color: #EEEEEE;
+    width: 100vw;
+    padding: 1% 10%;
+}
+footer a {
+    color: black;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #79ba45;
+
+}
+footer li{
+    
+}
