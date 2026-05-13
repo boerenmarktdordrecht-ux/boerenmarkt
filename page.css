@@ -69,8 +69,10 @@ a {
 }
 
 .logo-link img {
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 58px;
+    max-width: 190px;
+    object-fit: contain;
 }
 
 .site-nav {
@@ -162,6 +164,7 @@ a {
     font-size: clamp(44px, 7vw, 86px);
     line-height: 0.98;
     letter-spacing: 0;
+    overflow-wrap: break-word;
 }
 
 .hero-content > p:not(.eyebrow) {
@@ -326,7 +329,7 @@ a {
     padding: 86px 0 96px;
     background:
         linear-gradient(180deg, rgba(248, 244, 236, 0.96), rgba(255, 253, 248, 0.98)),
-        url("Images/Markt.jpg") center / cover;
+        url("images/boerenmarkt2-web.jpg") center / cover;
 }
 
 .section-heading {
@@ -398,6 +401,117 @@ a {
     color: var(--muted);
 }
 
+.location-section {
+    padding: 86px 0;
+    background: var(--paper);
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 44px;
+    align-items: center;
+}
+
+.location-image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.location-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.location-content h2 {
+    margin: 0 0 18px;
+    color: var(--green-900);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+.location-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.quick-facts {
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.quick-facts span {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 10px 24px rgba(23, 51, 31, 0.07);
+}
+
+.quick-facts strong {
+    min-width: 64px;
+    color: var(--green-700);
+}
+
+.participants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 44px;
+}
+
+.participants span {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 13px;
+    background: white;
+    color: var(--green-900);
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(23, 51, 31, 0.07);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.story-grid article {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.story-grid img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.story-grid h3 {
+    margin: 26px 26px 12px;
+    color: var(--green-900);
+    font-size: 24px;
+    line-height: 1.18;
+}
+
+.story-grid p {
+    margin: 0 26px 28px;
+    color: var(--muted);
+}
+
 .site-footer {
     background: #17251c;
     color: rgba(255, 255, 255, 0.82);
@@ -423,6 +537,7 @@ a {
 .site-footer address {
     display: grid;
     gap: 8px;
+    margin-top: 18px;
     font-style: normal;
 }
 
@@ -435,6 +550,27 @@ a {
 .site-footer a:focus-visible {
     color: #d6efc6;
     outline: none;
+}
+
+.footer-partners p {
+    margin: 0 0 16px;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.partner-logos img {
+    width: 100%;
+    max-height: 92px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 12px;
 }
 
 .copyright {
@@ -455,6 +591,8 @@ a {
     .intro-grid,
     .feature-grid,
     .agenda-grid,
+    .location-grid,
+    .story-grid,
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -479,7 +617,8 @@ a {
     }
 
     .logo-link img {
-        width: 124px;
+        width: auto;
+        height: 54px;
     }
 
     .site-nav {
@@ -503,7 +642,8 @@ a {
     }
 
     .hero-content h1 {
-        font-size: 44px;
+        font-size: 34px;
+        line-height: 1.08;
     }
 
     .hero-content > p:not(.eyebrow) {
@@ -556,5 +696,19 @@ a {
     .agenda-item span {
         width: fit-content;
         padding: 0 12px;
+    }
+
+    .quick-facts span {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .participants span {
+        width: 100%;
+    }
+
+    .partner-logos {
+        grid-template-columns: 1fr;
     }
 }
