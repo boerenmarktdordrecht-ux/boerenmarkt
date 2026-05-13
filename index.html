@@ -2,154 +2,188 @@
 <html lang="nl">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Boerenmarkt Dordrecht met lokale producten, marktdagen en praktische informatie.">
     <title>Boerenmarkt Dordrecht</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='page.css'>
+    <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <section class="topbar">
-        <div class="fixed">
-            <a href="https://platformduurzaamdordrecht.nl/">
-                <img src="Images/platformduurzaamdordrecht-small.svg" alt="">
-            </a>
-        </div>
-    </section>
-    <section class="hero">
-        <div class="slider hero-slider">
-            <div class="slide active">
-                <img src="Images/boerenmarkt_1.jpg" alt="Boerenmarkt Dordrecht">
-                <div class="content">
-                    <h1>Boerenmarkt Dordrecht</h1>
-                    <p>Verse producten, recht van het land</p>
-                    <div class="buttons">
-                        <button class="primary">Bekijk markt</button>
-                        <button class="secondary">Meer info</button>
+    <header class="site-header">
+        <a class="logo-link" href="https://platformduurzaamdordrecht.nl/" aria-label="Platform Duurzaam Dordrecht">
+            <img src="Images/platformduurzaamdordrecht-small.svg" alt="Platform Duurzaam Dordrecht">
+        </a>
+        <nav class="site-nav" aria-label="Hoofdnavigatie">
+            <a href="#over">Over</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Boerenmarkt Dordrecht">
+            <div class="slider hero-slider">
+                <article class="slide active">
+                    <img src="Images/boerenmarkt_1.jpg" alt="Bezoekers op de Boerenmarkt Dordrecht">
+                    <div class="hero-content">
+                        <p class="eyebrow">Lokaal, vers en dichtbij</p>
+                        <h1>Boerenmarkt Dordrecht</h1>
+                        <p>Verse producten, ambachtelijke smaken en ontmoetingen met makers uit de regio.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#agenda">Bekijk marktdagen</a>
+                            <a class="button secondary" href="#over">Meer over de markt</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="slide">
+                    <img src="Images/boerenmarkt_2.jpg" alt="Lokale groenten en fruit op de markt">
+                    <div class="hero-content">
+                        <p class="eyebrow">Recht van het land</p>
+                        <h1>Lokale Producten</h1>
+                        <p>Groenten, fruit, brood, zuivel en specialiteiten met aandacht geteeld en gemaakt.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#over">Ontdek het aanbod</a>
+                            <a class="button secondary" href="#contact">Plan je bezoek</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="slide">
+                    <img src="Images/boerenmarkt_3.jpg" alt="Sfeervolle markt in Dordrecht">
+                    <div class="hero-content">
+                        <p class="eyebrow">Elke week gezellig</p>
+                        <h1>Proef de Sfeer</h1>
+                        <p>Kom langs, doe je boodschappen bewust en leer de mensen achter je eten kennen.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#agenda">Bekijk agenda</a>
+                            <a class="button secondary" href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-            <div class="slide">
-                <img src="Images/boerenmarkt_2.jpg" alt="Lokale groenten en fruit">
-                <div class="content">
-                    <h1>Lokale Producten</h1>
-                    <p>Groenten, fruit en ambachtelijke specialiteiten</p>
-                    <div class="buttons">
-                        <button class="primary">Ontdek aanbod</button>
-                        <button class="secondary">Plan bezoek</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="Images/boerenmarkt_3.jpg" alt="Sfeervolle markt">
-                <div class="content">
-                    <h1>Elke Week Gezellig</h1>
-                    <p>Kom langs en proef de sfeer van de markt</p>
-                    <div class="buttons">
-                        <button class="primary">Bekijk agenda</button>
-                        <button class="secondary">Contact</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button class="prev hero-prev"><</button>
-        <button class="next hero-next">></button>
-    </section>
-
-    <section class="info">
-        <section class="over_de_boerenmarkt">
-            <h2>Over de Boerenmarkt</h2>
-            <p>De Boerenmarkt in Dordrecht is een wekelijkse markt waar lokale boeren en producenten hun verse producten
-                aanbieden. Van groenten en fruit tot ambachtelijke kazen en brood, hier vind je alles wat je nodig hebt
-                voor een gezonde maaltijd. Kom langs en proef de versheid van het land!</p>
+            <button class="slider-button hero-prev" type="button" aria-label="Vorige foto">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="slider-button hero-next" type="button" aria-label="Volgende foto">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
         </section>
-    </section>
 
-    <section class="slides_agenda">
-        <div class="agenda-slider">
-            <div class="agenda-slide active">
-                <h2>Marktdagen</h2>
-                <div class="agenda-cards">
-                    <div class="agenda-card">
-                        <span class="agenda-time">08:00</span>
-                        <p>Opbouw van de markt en welkom voor vroege bezoekers.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">10:00</span>
-                        <p>Drukste moment voor verse groenten, brood en zuivel.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">14:00</span>
-                        <p>Officieel einde van de markt op de Grote Markt.</p>
-                    </div>
+        <section class="intro-section" id="over">
+            <div class="section-inner intro-grid">
+                <div>
+                    <p class="section-label">Over de markt</p>
+                    <h2>Vers van dichtbij, midden in Dordrecht.</h2>
+                </div>
+                <div class="intro-copy">
+                    <p>De Boerenmarkt in Dordrecht brengt lokale boeren, bakkers en producenten samen. Je vindt er seizoensgroenten, fruit, brood, zuivel, kaas en andere ambachtelijke producten voor een bewuste maaltijd.</p>
+                    <p>De markt is kleinschalig, persoonlijk en gemaakt voor mensen die graag weten waar hun eten vandaan komt.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="agenda-slide">
-                <h2>Komende Evenementen</h2>
-                <div class="agenda-cards">
-                    <div class="agenda-card">
-                        <span class="agenda-time">15 juni</span>
-                        <p>Proeverij van lokale kazen met de boeren uit de regio.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">22 juni</span>
-                        <p>Kookdemonstratie met seizoensgroenten en kruiden.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">29 juni</span>
-                        <p>Kindermarkt met kleine activiteiten en proeverijen.</p>
-                    </div>
+        <section class="feature-band">
+            <div class="section-inner feature-grid">
+                <article>
+                    <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                    <h3>Seizoensproducten</h3>
+                    <p>Het aanbod beweegt mee met het seizoen en komt zoveel mogelijk uit de regio.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-bread-slice" aria-hidden="true"></i>
+                    <h3>Ambachtelijk aanbod</h3>
+                    <p>Van vers brood tot kaas en specialiteiten: direct van makers met liefde voor hun vak.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                    <h3>Ontmoet de makers</h3>
+                    <p>Stel vragen, proef producten en ontdek het verhaal achter je boodschappen.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="agenda-section" id="agenda">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="section-label">Agenda</p>
+                    <h2>Marktdagen en praktische informatie</h2>
+                </div>
+
+                <div class="agenda-grid">
+                    <article class="agenda-panel">
+                        <h3>Marktdag</h3>
+                        <div class="agenda-item">
+                            <span>08:00</span>
+                            <p>Opbouw van de markt en welkom voor vroege bezoekers.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>10:00</span>
+                            <p>Het drukste moment voor verse groenten, brood en zuivel.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>14:00</span>
+                            <p>Officieel einde van de markt op de Grote Markt.</p>
+                        </div>
+                    </article>
+
+                    <article class="agenda-panel accent">
+                        <h3>Komende evenementen</h3>
+                        <div class="agenda-item">
+                            <span>15 juni</span>
+                            <p>Proeverij van lokale kazen met boeren uit de regio.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>22 juni</span>
+                            <p>Kookdemonstratie met seizoensgroenten en kruiden.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>29 juni</span>
+                            <p>Kindermarkt met kleine activiteiten en proeverijen.</p>
+                        </div>
+                    </article>
+
+                    <article class="agenda-panel">
+                        <h3>Praktische info</h3>
+                        <div class="agenda-item">
+                            <span>Locatie</span>
+                            <p>Grote Markt, Dordrecht, midden in het historische centrum.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>Toegang</span>
+                            <p>Gratis toegang voor iedereen, met genoeg plek om rond te lopen.</p>
+                        </div>
+                        <div class="agenda-item">
+                            <span>Tip</span>
+                            <p>Neem een boodschappentas mee voor verse producten en brood.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="agenda-slide">
-                <h2>Praktische Info</h2>
-                <div class="agenda-cards">
-                    <div class="agenda-card">
-                        <span class="agenda-time">Locatie</span>
-                        <p>Grote Markt, Dordrecht, midden in het historische centrum.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">Toegang</span>
-                        <p>Gratis toegang voor iedereen, met genoeg plek om rond te lopen.</p>
-                    </div>
-                    <div class="agenda-card">
-                        <span class="agenda-time">Tip</span>
-                        <p>Neem een boodschappentas mee voor verse producten en brood.</p>
-                    </div>
-                </div>
+    <footer class="site-footer" id="contact">
+        <div class="section-inner footer-grid">
+            <div>
+                <h2>Platform Duurzaam Dordrecht</h2>
+                <p>Meer informatie over de organisatie en contactpersonen vind je via de bestuurspagina.</p>
             </div>
+            <address>
+                <a href="https://share.google/dvYMc2AoHWYEMa143">De la Reystraat 10, 3312 EE Dordrecht</a>
+                <a href="mailto:secretaris@platformduurzaamdordrecht.nl">secretaris@platformduurzaamdordrecht.nl</a>
+                <a href="tel:0786145800">078 614 5800</a>
+                <a href="https://www.platformduurzaamdordrecht.nl/platform/bestuur/">Bestuurspagina</a>
+            </address>
         </div>
-
-        <!--    <button class="agenda-prev" aria-label="Vorige agenda-slide"><</button>
-        <button class="agenda-next" aria-label="Volgende agenda-slide">></button>-->
-    </section>
-    <footer>
-        <div class="info">
-            <h2>Platform Duurzaam Dordrecht</h2>
-            <p><strong>Secretaris</strong></p>
-            <p>Iemand</p>
-            <ul>
-                <li>Location: <a href="https://share.google/NoSsHq5mrmYOkU8qC">Test straat 299 3310AA Dordrecht</a></li>
-                <li>Mail: <a href="mailto:secretaris@platformduurzaamdordrecht.nl">secretaris@onbekend.nl</a></li>
-                <li>Tel: <a href="tel:000 0000000">00000000000</a> / <a href="tel:078 000 0000000">078 000 0000000</a>
-                </li>
-                <li>Alle contacten zijn te vinden op de <br> <a
-                        href="https://www.platformduurzaamdordrecht.nl/platform/bestuur/">Bestuurspagina</a></li>
-            </ul>
-        </div>
-        <div class="social_media">
-            <i class="fa-brands fa-facebook-f"></i>
-        </div>
-        <p>All rights reserved © 2016 - 2026 Platform Duurzaam Dordrecht</p>
+        <p class="copyright">&copy; 2016 - 2026 Platform Duurzaam Dordrecht. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script src="page.js"></script>
 </body>
-<script src='page.js'></script>
 
 </html>
