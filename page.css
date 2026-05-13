@@ -159,12 +159,14 @@ a {
 }
 
 .hero-content h1 {
-    max-width: 780px;
+    max-width: 100%;
     margin: 0;
     font-size: clamp(44px, 7vw, 86px);
     line-height: 0.98;
     letter-spacing: 0;
     overflow-wrap: break-word;
+    word-break: keep-all;
+    white-space: normal;
 }
 
 .hero-content > p:not(.eyebrow) {
