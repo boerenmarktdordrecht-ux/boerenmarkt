@@ -552,6 +552,18 @@ a {
     outline: none;
 }
 
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-person {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .footer-partners p {
     margin: 0 0 16px;
 }
