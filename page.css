@@ -55,11 +55,30 @@ a {
     gap: 18px;
     padding: 10px 14px 10px 18px;
     transform: translateX(-50%);
-    border: none !important;
-    border-radius: 0;
-    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    border-radius: 8px;
+    background: rgba(23, 51, 31, 0.12) !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.site-header.is-scrolled {
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.site-header.is-scrolled .logo-link,
+.site-header.is-scrolled .site-nav {
+    opacity: 0.42;
+    transition: opacity 0.2s ease;
+}
+
+.site-header.is-scrolled:hover .logo-link,
+.site-header.is-scrolled:focus-within .logo-link,
+.site-header.is-scrolled:hover .site-nav,
+.site-header.is-scrolled:focus-within .site-nav {
+    opacity: 1;
 }
 
 .logo-link {
@@ -89,6 +108,11 @@ a {
     font-weight: 700;
     text-decoration: none;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.site-header.is-scrolled .site-nav a {
+    color: var(--green-900);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 .site-nav a:hover,
@@ -168,6 +192,14 @@ a {
     overflow-wrap: break-word;
     word-break: keep-all;
     white-space: normal;
+}
+
+.hero-content h1 span {
+    display: block;
+}
+
+.hero-title-main {
+    white-space: nowrap;
 }
 
 .hero-content > p:not(.eyebrow) {
@@ -629,12 +661,13 @@ a {
         flex-direction: row;
         justify-content: space-between;
         gap: 10px;
-        padding: 12px;
+        padding: 8px 10px;
+        background: rgba(23, 51, 31, 0.08) !important;
     }
 
     .logo-link img {
         width: auto;
-        height: 54px;
+        height: 46px;
     }
 
     .site-nav {
@@ -644,8 +677,8 @@ a {
     }
 
     .site-nav a {
-        padding: 8px 9px;
-        font-size: 14px;
+        padding: 7px 8px;
+        font-size: 13px;
     }
 
     .hero,
@@ -659,7 +692,7 @@ a {
     }
 
     .hero-content h1 {
-        font-size: 34px;
+        font-size: clamp(29px, 8.2vw, 34px);
         line-height: 1.08;
     }
 

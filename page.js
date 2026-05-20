@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".site-header");
     const slides = Array.from(document.querySelectorAll(".hero-slider .slide"));
     const previousButton = document.querySelector(".hero-prev");
     const nextButton = document.querySelector(".hero-next");
     let activeIndex = 0;
     let timerId;
+
+    function updateHeaderState() {
+        header?.classList.toggle("is-scrolled", window.scrollY > 80);
+    }
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
 
     if (!slides.length) {
         return;
