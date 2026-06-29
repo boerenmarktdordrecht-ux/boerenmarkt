@@ -43,7 +43,7 @@ a {
 }
 
 .site-header {
-    position: fixed;
+    position: absolute;
     top: 18px;
     left: 50%;
     z-index: 20;
@@ -61,24 +61,6 @@ a {
     box-shadow: none !important;
     backdrop-filter: none !important;
     transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.site-header.is-scrolled {
-    border-color: transparent !important;
-    background: transparent !important;
-}
-
-.site-header.is-scrolled .logo-link,
-.site-header.is-scrolled .site-nav {
-    opacity: 0.42;
-    transition: opacity 0.2s ease;
-}
-
-.site-header.is-scrolled:hover .logo-link,
-.site-header.is-scrolled:focus-within .logo-link,
-.site-header.is-scrolled:hover .site-nav,
-.site-header.is-scrolled:focus-within .site-nav {
-    opacity: 1;
 }
 
 .logo-link {
@@ -110,10 +92,7 @@ a {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.site-header.is-scrolled .site-nav a {
-    color: var(--green-900);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
-}
+
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
@@ -629,6 +608,60 @@ a {
     text-align: center;
 }
 
+.success-section {
+    padding: 86px 0;
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+}
+
+.success-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.success-content h2 {
+    margin: 0 0 18px;
+    color: var(--green-900);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+.success-content p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.success-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 @media (max-width: 980px) {
     .hero,
     .hero-slider {
@@ -640,8 +673,17 @@ a {
     .agenda-grid,
     .location-grid,
     .story-grid,
+    .success-grid,
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .success-grid {
+        gap: 32px;
+    }
+
+    .video-container {
+        margin: 0 auto;
     }
 
     .agenda-panel {
